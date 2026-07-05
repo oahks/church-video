@@ -1,0 +1,44 @@
+export const siteConfig = {
+  name: "Adeyeye Emmanuel",
+  title: "Church Video Editor",
+  tagline:
+    "Church Video Editor | Sermon Editing | Worship & Event Highlights | Social Reels",
+  headline: "Helping Churches Expand Their Ministry Through Video",
+  description:
+    "Professional church video editor specializing in sermon editing, worship videos, event highlights, testimony reels, and weekly content repurposing for growing ministries.",
+  email: "aemmanuel0002@gmail.com",
+  phone: "+234 814 374 8235",
+  whatsapp: "https://wa.me/2348143748235",
+  calendly: "https://calendly.com/aemmanuel0002/30min",
+  location: "Remote — Serving Churches Worldwide",
+  profileImage: "/images/placeholders/profile.svg",
+  heroVideo: "/videos/placeholders/hero-loop.mp4",
+  testimonialVideo: {
+    title: "Pastor Video Testimonial [Sample]",
+    source: "youtube" as const,
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  },
+  social: {
+    linkedin: "https://www.linkedin.com/in/emmanuel-adeyeye-06a13b211",
+    facebook: "https://www.facebook.com/profile.php?id=61588219356979",
+    instagram: "https://www.instagram.com/editandautomate/",
+  },
+  stats: {
+    sermonsEdited: 50,
+    reelsCreated: 100,
+    churchesServed: 15,
+    yearsExperience: 4,
+  },
+  navLinks: [
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Portfolio", href: "#portfolio" },
+    { label: "Showreel", href: "#showreel" },
+    { label: "Process", href: "#process" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contact", href: "#contact" },
+  ],
+  aboutQuote:
+    "Every sermon carries a message worth reaching beyond Sunday. My mission is to help churches turn one message into ministry that reaches people all week long.",
+  footerTagline: "Helping Churches Expand Their Ministry Through Video.",
+} as const;

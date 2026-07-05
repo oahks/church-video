@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0b0f;
+  --foreground: #f5f5f5;
+  --card: rgba(255, 255, 255, 0.03);
+  --card-hover: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.08);
+  --gold: #c9a227;
+  --gold-light: #e0bc4a;
+  --royal: #1e3a8a;
+  --royal-light: #2563eb;
+  --accent: var(--gold);
+  --accent-light: var(--gold-light);
+  --secondary: var(--royal);
+  --muted: #9ca3af;
+  --section-alt: rgba(255, 255, 255, 0.02);
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-strong-bg: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(201, 162, 39, 0.15);
+  --overlay: rgba(0, 0, 0, 0.75);
+  --glow-gold: rgba(201, 162, 39, 0.2);
+  --glow-royal: rgba(30, 58, 138, 0.25);
+  --tag-bg: rgba(201, 162, 39, 0.1);
+  --success: #22c55e;
+  --mobile-nav-bg: #0b0b0f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-section-alt: var(--section-alt);
+  --color-tag: var(--tag-bg);
+  --color-success: var(--success);
+  --font-sans: var(--font-dm-sans);
+  --font-heading: var(--font-playfair);
+}
+
+.font-heading {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-strong {
+  background: var(--glass-strong-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--royal-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-gold {
+  box-shadow: 0 0 40px var(--glow-gold);
+}
+
+.glow-royal {
+  box-shadow: 0 0 60px var(--glow-royal);
+}
+
+.hero-gradient-fallback {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 80%, rgba(30, 58, 138, 0.2) 0%, transparent 50%),
+    linear-gradient(180deg, #0b0b0f 0%, #12121a 50%, #0b0b0f 100%);
+  animation: heroShift 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroShift {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.1);
+  }
+}
+
+.section-padding {
+  @apply px-4 py-20 sm:px-6 lg:px-8 lg:py-28;
+}
+
+.container-max {
+  @apply mx-auto max-w-7xl;
+}
+
+.mobile-nav-panel {
+  background: var(--mobile-nav-bg);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Calendly widget dark theme adjustments */
+.calendly-inline-widget iframe {
+  border-radius: 12px;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#0B0B0F"/>
+      <stop offset="50%" style="stop-color:#1E3A8A"/>
+      <stop offset="100%" style="stop-color:#C9A227"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#g5)"/>
+  <text x="400" y="220" text-anchor="middle" fill="#F5F5F5" font-family="Georgia, serif" font-size="28" font-weight="bold">Church Event Recaps</text>
+  <text x="400" y="260" text-anchor="middle" fill="#9CA3AF" font-family="sans-serif" font-size="16">Placeholder Thumbnail</text>
+</svg>
