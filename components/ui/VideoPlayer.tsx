@@ -71,8 +71,8 @@ export function VideoPlayer({
     );
   }
 
-  if (source === "google-drive" && fileId) {
-    const id = parseGoogleDriveFileId(fileId);
+  if (source === "google-drive" && (url || fileId)) {
+    const id = parseGoogleDriveFileId(url || fileId || "");
     return (
       <iframe
         src={googleDriveEmbedUrl(id)}

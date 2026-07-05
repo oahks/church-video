@@ -9,7 +9,7 @@ export const faqItems: FAQItem[] = [
     id: "turnaround",
     question: "What is your typical editing turnaround time?",
     answer:
-      "Standard sermon edits are delivered within 3–5 business days. Rush delivery (24–48 hours) is available for urgent projects. Reels and short-form clips typically ship within 2–3 business days. Turnaround depends on footage length and project scope — we'll confirm timelines during our initial consultation.",
+      "Standard sermon edits are delivered within 1-2 business days. Rush delivery (12 - 24 hours) is available for urgent projects. Reels and short-form clips typically ship within 2–3 business days. Turnaround depends on footage length and project scope — we'll confirm timelines during our initial consultation.",
   },
   {
     id: "weekly-sermons",
@@ -21,7 +21,7 @@ export const faqItems: FAQItem[] = [
     id: "reels-from-sermons",
     question: "Do you create reels and shorts from existing sermons?",
     answer:
-      "Yes — this is one of my core services. I extract the most impactful moments from your sermons and transform them into platform-ready reels with captions, hooks, and branded graphics. Most churches get 5–10 reels from a single sermon.",
+      "Yes, this is one of my core services. I extract the most impactful moments from your sermons and transform them into platform-ready reels with captions, hooks, and branded graphics. Most churches get 5–10 reels from a single sermon.",
   },
   {
     id: "captions",

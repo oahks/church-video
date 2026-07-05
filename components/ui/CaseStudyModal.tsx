@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect } from "react";
-import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 import type { Project } from "@/lib/data/projects";
@@ -13,6 +12,8 @@ type CaseStudyModalProps = {
 };
 
 export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
+  const hasVideos = (project?.videos?.length ?? 0) > 0;
+
   useEffect(() => {
     if (!project) return;
 
@@ -57,34 +58,33 @@ export function CaseStudyModal({ project, onClose }: CaseStudyModalProps) {
               <X className="h-5 w-5" />
             </button>
 
-            <div className="relative mb-6 aspect-video overflow-hidden rounded-xl">
-              <Image
-                src={project.thumbnail}
-                alt={project.title}
-                fill
-                className="object-cover"
-                sizes="768px"
-              />
-            </div>
-
             <span className="inline-block rounded-lg bg-accent/20 px-2.5 py-1 text-xs font-medium text-accent">
               {project.category}
             </span>
-            <h3 className="mt-3 font-heading text-2xl font-bold text-foreground">
+            <h3 className="mt-3 font-heading text-2xl font-bold text-foreground pr-10">
               {project.title}
             </h3>
             <p className="mt-1 text-sm text-muted">{project.church}</p>
 
-            {project.previewVideo && (
-              <div className="mt-6">
-                <VideoPlayer
-                  source={project.previewVideo.source}
-                  url={project.previewVideo.url}
-                  fileId={project.previewVideo.fileId}
-                  filename={project.previewVideo.filename}
-                  poster={project.previewVideo.poster}
-                  title={project.title}
-                />
+            {hasVideos && (
+              <div className="mt-6 space-y-6">
+                {project.videos!.map((video, index) => (
+                  <div key={`${project.id}-video-${index}`}>
+                    {(video.title || project.videos!.length > 1) && (
+                      <p className="mb-2 text-sm font-medium text-foreground">
+                        {video.title ?? `Video ${index + 1}`}
+                      </p>
+                    )}
+                    <VideoPlayer
+                      source={video.source}
+                      url={video.url}
+                      fileId={video.fileId}
+                      filename={video.filename}
+                      poster={video.poster}
+                      title={video.title ?? project.title}
+                    />
+                  </div>
+                ))}
               </div>
             )}
 

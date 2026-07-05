@@ -7,7 +7,7 @@ import { testimonials } from "@/lib/data/testimonials";
 import { siteConfig } from "@/lib/site-config";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { TestimonialCarousel } from "@/components/ui/TestimonialCarousel";
-import { VideoPlayer } from "@/components/ui/VideoPlayer";
+import { TestimonialVideoModal } from "@/components/ui/TestimonialVideoModal";
 import { GlassCard } from "@/components/ui/GlassCard";
 
 export function Testimonials() {
@@ -38,42 +38,30 @@ export function Testimonials() {
                 Placeholder slot for a pastor video review
               </p>
 
-              {!videoOpen ? (
-                <button
-                  type="button"
-                  onClick={() => setVideoOpen(true)}
-                  className="group relative mt-4 aspect-video w-full overflow-hidden rounded-xl cursor-pointer"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 to-accent/20" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="rounded-full bg-accent/90 p-4 text-background transition-transform group-hover:scale-110">
-                      <Play className="h-8 w-8 fill-current" />
-                    </div>
+              <button
+                type="button"
+                onClick={() => setVideoOpen(true)}
+                className="group relative mt-4 aspect-video w-full overflow-hidden rounded-xl cursor-pointer"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-secondary/40 to-accent/20" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="rounded-full bg-accent/90 p-4 text-background transition-transform group-hover:scale-110">
+                    <Play className="h-8 w-8 fill-current" />
                   </div>
-                  <p className="absolute bottom-3 left-3 right-3 text-xs text-white/80">
-                    {siteConfig.testimonialVideo.title}
-                  </p>
-                </button>
-              ) : (
-                <div className="mt-4">
-                  <VideoPlayer
-                    source={siteConfig.testimonialVideo.source}
-                    url={siteConfig.testimonialVideo.url}
-                    title={siteConfig.testimonialVideo.title}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setVideoOpen(false)}
-                    className="mt-2 text-sm text-muted hover:text-accent cursor-pointer"
-                  >
-                    Close video
-                  </button>
                 </div>
-              )}
+                <p className="absolute bottom-3 left-3 right-3 text-xs text-white/80">
+                  {siteConfig.testimonialVideo.title}
+                </p>
+              </button>
             </GlassCard>
           </motion.div>
         </div>
       </div>
+
+      <TestimonialVideoModal
+        open={videoOpen}
+        onClose={() => setVideoOpen(false)}
+      />
     </section>
   );
 }

@@ -40,6 +40,8 @@ export function PortfolioCard({
 
   const handleClick = () => onOpenCaseStudy(project);
 
+  const primaryVideo = project.videos?.[0];
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -58,17 +60,22 @@ export function PortfolioCard({
           fill
           className={cn(
             "object-cover transition-opacity duration-300",
-            isHovering && project.previewVideo ? "opacity-0" : "opacity-100"
+            isHovering && primaryVideo ? "opacity-0" : "opacity-100"
           )}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
 
-        {project.previewVideo?.source === "youtube" && isHovering && !isMobile && (
+        {primaryVideo &&
+          (primaryVideo.source === "youtube" ||
+            primaryVideo.source === "google-drive") &&
+          isHovering &&
+          !isMobile && (
           <div className="absolute inset-0">
             <VideoPlayer
-              source="youtube"
-              url={project.previewVideo.url}
-              title={project.title}
+              source={primaryVideo.source}
+              url={primaryVideo.url}
+              fileId={primaryVideo.fileId}
+              title={primaryVideo.title ?? project.title}
               className="h-full rounded-none"
             />
           </div>

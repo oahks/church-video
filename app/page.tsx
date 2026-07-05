@@ -6,7 +6,6 @@ import { About } from "@/components/sections/About";
 import { Services } from "@/components/sections/Services";
 import { ContentFunnel } from "@/components/sections/ContentFunnel";
 import { Portfolio } from "@/components/sections/Portfolio";
-import { Showreel } from "@/components/sections/Showreel";
 import { Process } from "@/components/sections/Process";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
@@ -22,7 +21,6 @@ export default function Home() {
         <Services />
         <ContentFunnel />
         <Portfolio />
-        <Showreel />
         <Process />
         <Testimonials />
         <FAQ />

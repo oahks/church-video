@@ -11,7 +11,6 @@ Built with a dark cinematic design, gold accents, glassmorphism, scroll animatio
 - **Services** — Six church video editing service cards with deliverables
 - **Content Funnel** — "One Sermon. Unlimited Reach." before/after infographic
 - **Portfolio** — Filterable 2-column video cards, hover previews, case-study modals
-- **Showreel** — Dedicated full-width video player section
 - **Process** — Four-step workflow timeline
 - **Testimonials** — Auto-advancing carousel with optional video testimonial modal
 - **FAQ** — Accordion with common client questions
@@ -62,7 +61,6 @@ Most copy and links live in data files — update these without touching compone
 | Name, contact, FastSubmit form, WhatsApp, stats, nav | [`lib/site-config.ts`](lib/site-config.ts) |
 | Services | [`lib/data/services.ts`](lib/data/services.ts) |
 | Portfolio projects & case studies | [`lib/data/projects.ts`](lib/data/projects.ts) |
-| Showreel video | [`lib/data/showreel.ts`](lib/data/showreel.ts) |
 | Testimonials | [`lib/data/testimonials.ts`](lib/data/testimonials.ts) |
 | Process steps | [`lib/data/process.ts`](lib/data/process.ts) |
 | FAQ items | [`lib/data/faq.ts`](lib/data/faq.ts) |
@@ -79,10 +77,6 @@ Add a looping MP4 at `public/videos/placeholders/hero-loop.mp4` and ensure `hero
 ### Portfolio videos & thumbnails
 
 Add assets under `public/` and reference paths in `lib/data/projects.ts`. Use lowercase folder names — Linux/Vercel builds are case-sensitive.
-
-### Showreel
-
-Update the YouTube URL or local video path in `lib/data/showreel.ts`.
 
 ### Contact form
 
@@ -113,7 +107,7 @@ video-portfolio/
 
 ## Placeholder Assets
 
-The site ships with placeholder SVGs, sample testimonials, and a YouTube stub for the showreel. Swap in real church media by updating the data files and dropping assets into `public/`.
+The site ships with placeholder SVGs and sample testimonials. Swap in real church media by updating the data files and dropping assets into `public/`.
 
 ## Deployment
 

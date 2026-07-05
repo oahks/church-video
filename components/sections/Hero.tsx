@@ -75,28 +75,6 @@ export function Hero() {
               </Link>
             </div>
 
-            <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              <AnimatedCounter
-                value={siteConfig.stats.sermonsEdited}
-                suffix="+"
-                label="Sermons Edited"
-              />
-              <AnimatedCounter
-                value={siteConfig.stats.reelsCreated}
-                suffix="+"
-                label="Reels Created"
-              />
-              <AnimatedCounter
-                value={siteConfig.stats.churchesServed}
-                suffix="+"
-                label="Churches Served"
-              />
-              <AnimatedCounter
-                value={siteConfig.stats.yearsExperience}
-                suffix="+"
-                label="Years Experience"
-              />
-            </div>
           </motion.div>
 
           <motion.div

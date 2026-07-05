@@ -17,9 +17,9 @@ export const siteConfig = {
   profileImage: "/images/profile.jpg",
   heroVideo: "/videos/placeholders/hero-loop.mp4",
   testimonialVideo: {
-    title: "Pastor Video Testimonial [Sample]",
-    source: "youtube" as const,
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    title: "Media Head Testimonial",
+    source: "google-drive" as const,
+    url: "https://drive.google.com/file/d/1cfKHFMCrb4V-4L_j8gI5lsIfSPNcMI6g/view",
   },
   social: {
     linkedin: "https://www.linkedin.com/in/emmanuel-adeyeye-06a13b211",
@@ -36,7 +36,6 @@ export const siteConfig = {
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
     { label: "Portfolio", href: "#portfolio" },
-    { label: "Showreel", href: "#showreel" },
     { label: "Process", href: "#process" },
     { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
