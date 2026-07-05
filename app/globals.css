@@ -71,6 +71,32 @@ body {
   font-family: var(--font-dm-sans), system-ui, sans-serif;
 }
 
+/* Scrollbar — Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--background);
+}
+
+/* Scrollbar — Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  border-radius: 999px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-light);
+}
+
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -129,9 +155,4 @@ body {
   background: var(--mobile-nav-bg);
   border-top: 1px solid var(--border);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-/* Calendly widget dark theme adjustments */
-.calendly-inline-widget iframe {
-  border-radius: 12px;
 }

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/SocialIcons";
 import { siteConfig } from "@/lib/site-config";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CalendlyInlineEmbed } from "@/components/ui/CalendlyInlineEmbed";
+import { ContactForm } from "@/components/ui/ContactForm";
 import { GlassCard } from "@/components/ui/GlassCard";
 
 export function Contact() {
@@ -19,7 +19,7 @@ export function Contact() {
         <SectionHeader
           label="Contact"
           title="Let's Expand Your Ministry Through Video"
-          description="Book a free 30-minute consultation to discuss your church's video needs, workflow, and content goals."
+          description="Send a message about your church's video needs, workflow, and content goals — I'll get back to you shortly."
         />
 
         <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
@@ -30,7 +30,7 @@ export function Contact() {
             transition={{ duration: 0.5 }}
           >
             <GlassCard strong className="overflow-hidden p-0">
-              <CalendlyInlineEmbed />
+              <ContactForm />
             </GlassCard>
           </motion.div>
 

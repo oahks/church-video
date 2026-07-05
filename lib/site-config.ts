@@ -9,9 +9,12 @@ export const siteConfig = {
   email: "aemmanuel0002@gmail.com",
   phone: "+234 814 374 8235",
   whatsapp: "https://wa.me/2348143748235",
-  calendly: "https://calendly.com/aemmanuel0002/30min",
+  fastSubmit: {
+    submitUrl:
+      "https://www.fastsubmit.cloud/api/submit/OcdGgA9k7y9VYsiDWVfc",
+  },
   location: "Remote — Serving Churches Worldwide",
-  profileImage: "/images/placeholders/profile.svg",
+  profileImage: "/images/profile.jpg",
   heroVideo: "/videos/placeholders/hero-loop.mp4",
   testimonialVideo: {
     title: "Pastor Video Testimonial [Sample]",
@@ -26,8 +29,8 @@ export const siteConfig = {
   stats: {
     sermonsEdited: 50,
     reelsCreated: 100,
-    churchesServed: 15,
-    yearsExperience: 4,
+    churchesServed: 5,
+    yearsExperience: 2,
   },
   navLinks: [
     { label: "About", href: "#about" },
