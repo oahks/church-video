@@ -19,7 +19,7 @@ export function Testimonials() {
         <SectionHeader
           label="Testimonials"
           title="What Pastors & Media Teams Say"
-          description="Hear from ministry leaders who've partnered on video content — sample testimonials shown until real reviews are collected."
+          description="Hear from ministry leaders who've partnered on video content."
         />
 
         <div className="grid gap-10 lg:grid-cols-[1fr_auto]">
