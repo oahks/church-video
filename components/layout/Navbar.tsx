@@ -56,7 +56,7 @@ export function Navbar() {
 
         <div className="hidden lg:block">
           <Link href="#contact">
-            <Button size="sm">Book a Call</Button>
+            <Button size="sm">Get in Touch</Button>
           </Link>
         </div>
 
@@ -87,7 +87,7 @@ export function Navbar() {
             ))}
             <li className="mt-2 px-4">
               <Link href="#contact" onClick={() => setMobileOpen(false)}>
-                <Button className="w-full">Book a Call</Button>
+                <Button className="w-full">Get in Touch</Button>
               </Link>
             </li>
           </ul>

@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://adeyeyeemmanuel.com"),
   title: `${siteConfig.name} | ${siteConfig.title}`,
   description: siteConfig.description,
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   keywords: [
     "Church Video Editor",
     "Sermon Video Editing",

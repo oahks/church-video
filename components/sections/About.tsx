@@ -1,11 +1,12 @@
 "use client";
 
-import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { Check, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { Button } from "@/components/ui/Button";
 
 export function About() {
   return (
@@ -13,39 +14,19 @@ export function About() {
       <div className="container-max">
         <SectionHeader
           label="About"
-          title="More Than Video Editing"
+          title="More Than Video Editing: Ministry Through Media"
           description="I partner with pastors and media teams to turn raw footage into ministry content that reaches people all week long."
         />
 
-        <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2 lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl border border-border"
-          >
-            <Image
-              src={siteConfig.profileImage}
-              alt={siteConfig.name}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 400px"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-lg leading-relaxed text-muted">
-              Hi, I&apos;m {siteConfig.name} — a dedicated church video editor
-              passionate about helping ministries share their message with
-              excellence. From full sermon edits to scroll-stopping reels, I
-              handle the post-production so your team can focus on ministry.
+              {siteConfig.aboutBio}
             </p>
 
             <GlassCard className="mt-8 border-l-4 border-l-accent">
@@ -54,28 +35,35 @@ export function About() {
               </blockquote>
             </GlassCard>
 
-            <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-4">
-              <AnimatedCounter
-                value={siteConfig.stats.sermonsEdited}
-                suffix="+"
-                label="Sermons"
-              />
-              <AnimatedCounter
-                value={siteConfig.stats.reelsCreated}
-                suffix="+"
-                label="Reels"
-              />
-              <AnimatedCounter
-                value={siteConfig.stats.churchesServed}
-                suffix="+"
-                label="Churches"
-              />
-              <AnimatedCounter
-                value={siteConfig.stats.yearsExperience}
-                suffix="+"
-                label="Years"
-              />
-            </div>
+            <Link href="#contact" className="mt-8 inline-block">
+              <Button variant="outline">
+                Let&apos;s Talk About Your Church
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <GlassCard strong>
+              <h3 className="font-heading text-lg font-bold text-foreground">
+                How I Help Ministries Grow Online
+              </h3>
+              <ul className="mt-6 space-y-4">
+                {siteConfig.aboutHighlights.map((highlight) => (
+                  <li key={highlight} className="flex items-start gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent">
+                      <Check className="h-3.5 w-3.5" />
+                    </span>
+                    <span className="text-muted leading-relaxed">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </GlassCard>
           </motion.div>
         </div>
       </div>

@@ -22,7 +22,7 @@ export function Portfolio() {
         <SectionHeader
           label="Portfolio"
           title="Featured Ministry Projects"
-          description="Explore sample projects across sermon reels, worship edits, conference highlights, and more."
+          description="Explore sample projects across sermon reels, worship edits, announcements, and more."
         />
 
         <div className="mb-10 flex flex-wrap justify-center gap-2">

@@ -1,10 +1,7 @@
 export type ProjectCategory =
   | "Sermon Reels"
   | "Worship Videos"
-  | "Conference Highlights"
-  | "Testimony Videos"
-  | "Church Event Recaps"
-  | "Social Media Shorts";
+  | "Announcements";
 
 export type VideoSource = "local" | "youtube" | "vimeo" | "google-drive";
 
@@ -35,10 +32,7 @@ export type Project = {
 export const projectCategories: ProjectCategory[] = [
   "Sermon Reels",
   "Worship Videos",
-  "Conference Highlights",
-  "Testimony Videos",
-  "Church Event Recaps",
-  "Social Media Shorts",
+  "Announcements",
 ];
 
 function driveVideo(url: string, title: string): ProjectVideo {
@@ -111,7 +105,7 @@ export const projects: Project[] = [
   {
     id: "church-announcement",
     title: "Church Announcement",
-    category: "Church Event Recaps",
+    category: "Announcements",
     church: "WoodLand Church",
     thumbnail: "/images/thumbnails/announcements.jpeg",
     videos: [

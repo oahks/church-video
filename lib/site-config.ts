@@ -3,9 +3,20 @@ export const siteConfig = {
   title: "Church Video Editor",
   tagline:
     "Church Video Editor | Sermon Editing | Worship & Event Highlights | Social Reels",
-  headline: "Helping Churches Expand Their Ministry Through Video",
+  headline: "Helping Churches Expand Their Ministry",
+  headlineHighlight: "Through Video",
+  heroSubheadline:
+    "I transform sermons, worship moments, and church events into engaging videos and social content that expand your ministry beyond Sunday.",
+  aboutBio:
+    "Hi, I'm Adeyeye Emmanuel, a church video editor based in Nigeria, working remotely with ministries worldwide. I turn one Sunday message into reels, clips, and shorts that keep your congregation engaged all week, so your media team can stay focused on ministry instead of post-production.",
   description:
     "Professional church video editor specializing in sermon editing, worship videos, event highlights, testimony reels, and weekly content repurposing for growing ministries.",
+  aboutHighlights: [
+    "Repurpose one sermon into a full week of social content",
+    "Spot the hook-worthy moments pastors want shared",
+    "Remote editing for churches in Nigeria and worldwide",
+    "Consistent branding across every platform you publish on",
+  ],
   email: "aemmanuel0002@gmail.com",
   phone: "+234 814 374 8235",
   whatsapp: "https://wa.me/2348143748235",

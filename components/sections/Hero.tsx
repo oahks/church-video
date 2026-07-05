@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronDown, Calendar } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -19,6 +19,13 @@ export function Hero() {
     if (!video) return;
     video.play().catch(() => setVideoError(true));
   }, []);
+
+  const stats = [
+    { value: siteConfig.stats.sermonsEdited, suffix: "+", label: "Sermons Edited" },
+    { value: siteConfig.stats.reelsCreated, suffix: "+", label: "Reels Created" },
+    { value: siteConfig.stats.churchesServed, suffix: "+", label: "Churches Served" },
+    { value: siteConfig.stats.yearsExperience, suffix: "+", label: "Years Experience" },
+  ];
 
   return (
     <section
@@ -52,15 +59,14 @@ export function Hero() {
             transition={{ duration: 0.7 }}
           >
             <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-accent">
-              Church Video Editor
+              {siteConfig.title}
             </p>
             <h1 className="font-heading text-4xl font-bold leading-tight text-foreground sm:text-5xl lg:text-6xl xl:text-7xl">
-              {siteConfig.headline.split("Through Video")[0]}
-              <span className="gradient-text">Through Video</span>
+              {siteConfig.headline}{" "}
+              <span className="gradient-text">{siteConfig.headlineHighlight}</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-              Professional sermon editing, worship videos, event highlights, and
-              social reels — helping your ministry reach people beyond Sunday.
+              {siteConfig.heroSubheadline}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -69,12 +75,23 @@ export function Hero() {
               </Link>
               <Link href="#contact">
                 <Button variant="outline" size="lg">
-                  <Calendar className="h-5 w-5" />
-                  Book a Free Consultation
+                  <Mail className="h-5 w-5" />
+                  Get in Touch
                 </Button>
               </Link>
             </div>
 
+            <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
+              {stats.map((stat) => (
+                <AnimatedCounter
+                  key={stat.label}
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                  className="text-left sm:text-center"
+                />
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
